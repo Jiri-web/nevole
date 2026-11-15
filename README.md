@@ -4,7 +4,7 @@ Statická česká informační stránka věnovaná veřejnoprávním médiím. B
 
 ## Jak otevřít
 
-Dvojklik na `index.html` v prohlížeči. Vše funguje i bez serveru; veřejná verze je publikována z GitHub Pages repozitáře `Jiri-web/nevole` na adrese `https://nevole.info/`.
+Dvojklik na `index.html` v prohlížeči. Vše funguje i bez serveru; veřejná verze je do aktivace vlastní domény publikována z GitHub Pages repozitáře `Jiri-web/nevole` na adrese `https://jiri-web.github.io/nevole/`.
 
 ## Soubory
 
