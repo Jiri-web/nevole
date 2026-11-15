@@ -1,28 +1,6 @@
 "use strict";
-/* Prague local time 2026-11-18 00:00 equals 2026-11-17 23:00 UTC (CET). */
-const END_OF_APPEAL = Date.parse("2026-11-17T23:00:00Z");
-const calloutTarget = document.getElementById("temporaryCallout");
-function renderTemporaryCallout() {
-  if (!calloutTarget) return;
-  if (Date.now() >= END_OF_APPEAL) {
-    calloutTarget.replaceChildren();
-    return;
-  }
-  if (calloutTarget.childElementCount) return;
-  const section = document.createElement("section");
-  section.className = "urgent";
-  section.id = "mimoradna-vyzva";
-  section.setAttribute("aria-labelledby", "urgentTitle");
-  section.innerHTML = `<div class="container"><p class="section-kicker">✦ Mimořádná občanská výzva</p><h2 id="urgentTitle">Pojďme do ulic. Slušně, ale nahlas.</h2><p class="lead">Zákon ještě není schválen a o budoucnosti České televize a Českého rozhlasu se rozhoduje právě teď. Přijďte svůj názor ukázat veřejně. Buďte ohleduplní k lidem kolem sebe, k městu i k těm, kdo to vidí jinak — a zároveň tak důrazní, aby náš hlas nešel přeslechnout.</p><ul class="urgent-rules" aria-label="Jak demonstrovat"><li>Pokojně</li><li>Ohleduplně</li><li>Důrazně</li></ul><a class="urgent-button" href="#dnesni-akce">Kdy a kde? ↓</a></div>`;
-  calloutTarget.append(section);
-}
-renderTemporaryCallout();
-// Keep the expiry correct if the browser stays open across midnight without a reload.
-if (Date.now() < END_OF_APPEAL) {
-  const remaining = END_OF_APPEAL - Date.now();
-  setTimeout(renderTemporaryCallout, Math.min(remaining + 50, 2147483647));
-  document.addEventListener('visibilitychange',()=>{if(!document.hidden) renderTemporaryCallout();});
-}
+// Informační panel pro 2. prosince je trvalou součástí HTML.
+// Nemá žádné automatické datum odstranění.
 const toggle = document.getElementById('menuToggle');
 const nav = document.getElementById('siteNav');
 if(toggle && nav){
@@ -46,4 +24,3 @@ if(shareButton){
    }catch(err){if(err?.name!=='AbortError' && shareFeedback)shareFeedback.textContent='Odkaz: '+data.url;}
  });
 }
-

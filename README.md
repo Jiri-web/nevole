@@ -9,18 +9,19 @@ Dvojklik na `index.html` v prohlížeči. Vše funguje i bez serveru; veřejná 
 ## Soubory
 
 - `index.html` — celý obsah, navigace a odkazy na zdroje
-- `impresum.html` — identifikační a kontaktní informace o projektu
+- `impresum.html` — základní informace o projektu
 - `ochrana-soukromi.html` — informace o soukromí a technickém zpracování u hostingu
 - `styles.css` — barvy české trikolóry a responsivní design, vysoký kontrast
-- `script.js` — dočasná výzva před hero, menu a sdílení; žádné odesílání formulářů
+- `script.js` — ovládání mobilního menu a sdílení; žádné odesílání formulářů
 - `assets/svazek-klicu.png` — grafický prvek s klíči na hero sekci
 - `favicon.svg` — ikonka projektu
 
-## Časově omezená výzva
+Všechny HTML stránky obsahují Content Security Policy, která omezuje načítání kódu a zdrojů na vlastní soubory webu.
 
-Žlutá výzva se vkládá do toku dokumentu NAD hero (nikoli overlay). JavaScript ji po skončení nastavené platnosti nevytvoří a odstraní ji i při ponechání stránky otevřené. Bez JavaScriptu se výzva nezobrazuje.
+## Informační panel
+
+Žlutý panel s pozváním vlády k veřejné debatě 2. prosince je trvalou součástí HTML nad hero sekcí. Nemá automatické datum skrytí a zobrazuje se i bez JavaScriptu.
 
 ## Důležité
 
 Obsah zachycuje stav **k 15. 11. 2026**, jde o pracovní návrh z této konverzace; před zveřejněním je vhodné ověřit aktualitu událostí a URL zdrojů. Nezveřejňuje se automaticky.
-

@@ -110,7 +110,7 @@ h3{font-size:1.2rem;font-weight:800;margin:0 0 10px;letter-spacing:-.01em}
   box-shadow:3px 3px 0 var(--red);
 }
 
-/* Dočasná výzva (vkládá script.js nad hero) */
+/* Žlutý informační panel (trvale v HTML nad hero) */
 .urgent{
   position:relative;
   background:var(--yellow);color:var(--ink);
@@ -217,27 +217,6 @@ h3{font-size:1.2rem;font-weight:800;margin:0 0 10px;letter-spacing:-.01em}
 .lead strong{background:var(--red);color:#fff;padding:1px 5px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 .source-hint{font-family:var(--type);font-size:.84rem;color:var(--muted);margin-top:28px}
 
-/* Dnešní akce a společné odjezdy */
-.today-events{position:relative;background:#fff;border-bottom:4px solid var(--ink)}
-.event-featured-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin:36px 0 42px}
-.event-featured{position:relative;background:var(--ink);color:#fff;border:4px solid var(--ink);padding:30px;box-shadow:8px 8px 0 var(--red);transform:rotate(-.5deg)}
-.event-featured.local{background:var(--red);box-shadow:8px 8px 0 var(--ink);transform:rotate(.5deg)}
-.event-featured .event-city{display:inline-block;background:#fff;color:var(--ink);padding:4px 10px;font-family:var(--type);font-size:.82rem;font-weight:700;text-transform:uppercase}
-.event-featured time{display:block;font-family:var(--poster);font-size:clamp(3.5rem,8vw,6rem);font-weight:900;line-height:1;margin:18px 0 8px}
-.event-featured h3{font-family:var(--poster);font-size:1.8rem;text-transform:uppercase;margin-bottom:12px}
-.event-featured p{color:#fff;margin-bottom:18px}.event-featured a{color:#fff;font-family:var(--type);font-weight:700;text-underline-offset:4px}
-.departures-block{background:rgba(17,69,126,.08);border:3px solid var(--ink);padding:clamp(24px,4vw,38px);box-shadow:7px 7px 0 var(--ink)}
-.departures-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:24px}
-.departures-heading h3{font-family:var(--poster);font-size:clamp(1.8rem,4vw,3rem);text-transform:uppercase;margin:8px 0 0}
-.departures-heading>p{max-width:430px;color:var(--text);font-size:.92rem;margin:0}
-.departure-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px;list-style:none;margin:0 0 28px;padding:0;border-top:2px solid var(--ink)}
-.departure-list li{display:flex;justify-content:space-between;gap:18px;padding:13px 0;border-bottom:2px solid rgba(17,69,126,.3)}
-.departure-list strong{font-weight:850}.departure-list span{text-align:right;color:var(--text);font-size:.9rem}
-.city-check{margin:0 0 26px;padding:14px 17px;background:#fff;border-left:8px solid var(--red);color:var(--text);font-size:.92rem}
-.city-check strong{color:var(--ink)}
-.map-button{display:inline-block;background:var(--red);color:#fff;padding:12px 18px;border:3px solid var(--ink);box-shadow:5px 5px 0 var(--ink);font-family:var(--poster);font-size:1.15rem;font-weight:900;text-transform:uppercase;text-decoration:none}
-.map-button:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--ink)}
-
 /* Společný „vylepený" vzhled karet */
 .fact-card,.compare-card,.argument-card,.question-card,.source-grid a,details{
   background:var(--paper-light);
@@ -278,22 +257,6 @@ h3{font-size:1.2rem;font-weight:800;margin:0 0 10px;letter-spacing:-.01em}
 .timeline-item.planned{border-left-style:dashed}
 .timeline-item.planned::before{background:#fff}
 .timeline-item.planned time{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
-.timeline-item.live-now{border-left-color:var(--red)}
-.timeline-item.live-now::before{animation:timeline-live-pulse 1.35s ease-in-out infinite}
-.timeline-item.live-now time{display:inline-flex;align-items:center;gap:9px;background:var(--ink);padding-right:4px}
-.timeline-live-label{display:inline-flex;align-items:center;gap:6px;background:var(--red);padding:2px 7px;color:#fff}
-.timeline-live-label::before{content:"";width:7px;height:7px;border-radius:50%;background:#fff;box-shadow:0 0 0 0 rgba(255,255,255,.7);animation:timeline-live-dot 1.35s ease-out infinite}
-.timeline-live-stream{display:table;margin-top:10px;padding:8px 12px;background:var(--yellow);color:var(--ink);box-shadow:4px 4px 0 var(--ink);font-family:var(--type);font-size:.84rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em;text-decoration:none;transform:rotate(-.4deg)}
-.timeline-live-stream:hover,.timeline-live-stream:focus-visible{background:var(--red);color:#fff;outline:3px solid var(--ink);outline-offset:2px}
-@keyframes timeline-live-pulse{
-  0%,100%{box-shadow:0 0 0 0 rgba(220,20,30,.15)}
-  50%{box-shadow:0 0 0 9px rgba(220,20,30,.28)}
-}
-@keyframes timeline-live-dot{
-  0%{box-shadow:0 0 0 0 rgba(255,255,255,.75)}
-  70%,100%{box-shadow:0 0 0 7px rgba(255,255,255,0)}
-}
-
 /* Tmavá sekce: peníze */
 .section-dark{position:relative;background:var(--ink);color:#fff}
 .section-dark::before,.section-dark::after{content:"";position:absolute;left:0;right:0;height:12px;background:var(--tape)}
@@ -367,16 +330,6 @@ h3{font-size:1.2rem;font-weight:800;margin:0 0 10px;letter-spacing:-.01em}
 }
 .section-statement h2::after{background:#fff;border:2px solid var(--ink);height:14px;width:170px;margin-top:22px}
 .section-statement p{max-width:900px;color:#fff;font-size:1.12rem;font-weight:500;line-height:1.85}
-.section-statement .statement-signoff{
-  display:inline-block;max-width:none;margin-top:26px;padding:14px 22px;
-  background:var(--ink);color:#fff;
-  font-family:var(--poster);font-weight:900;
-  font-size:clamp(1.5rem,3.2vw,2.4rem);
-  text-transform:uppercase;letter-spacing:.03em;line-height:1.2;
-  transform:rotate(-1.5deg);
-  box-shadow:7px 7px 0 #fff;
-}
-
 /* FAQ */
 details{margin-bottom:16px;box-shadow:5px 5px 0 var(--ink)}
 summary{
@@ -418,9 +371,8 @@ details p{font-size:.98rem;color:var(--text);padding:16px 20px;margin:0}
 }
 .site-footer p,.site-footer small{color:#fff}
 .site-footer small{font-family:var(--type);font-size:.8rem}
-.site-footer h2{font-family:var(--type);font-size:.9rem;letter-spacing:.1em;color:#fff;margin:0 0 12px}
 .share-button{
-  margin-top:20px;padding:11px 20px;cursor:pointer;
+  margin-top:0;padding:11px 20px;cursor:pointer;
   background:var(--red);color:#fff;border:3px solid #fff;
   font-family:var(--poster);font-size:1.2rem;font-weight:900;
   text-transform:uppercase;letter-spacing:.04em;
@@ -430,7 +382,6 @@ details p{font-size:.98rem;color:var(--text);padding:16px 20px;margin:0}
 .share-button:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 #fff}
 .share-button:active{transform:translate(3px,3px);box-shadow:2px 2px 0 #fff}
 .share-feedback{font-family:var(--type);font-size:.82rem;margin-top:12px}
-
 /* Právní stránky a odkazy v patičce */
 .legal-links{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:22px}
 .legal-links a{font-family:var(--type);font-size:.88rem;font-weight:700;text-transform:uppercase;text-underline-offset:4px}
@@ -497,14 +448,13 @@ details p{font-size:.98rem;color:var(--text);padding:16px 20px;margin:0}
   .status-content{align-items:flex-start;flex-direction:column}
   .footer-inner{flex-direction:column}
   .section-statement h2{font-size:clamp(3.6rem,19vw,5.5rem)}
-  .event-featured-grid,.departure-list{grid-template-columns:1fr}.departures-heading{display:block}.departures-heading>p{margin-top:14px}.departure-list li{display:block}.departure-list span{display:block;text-align:left;margin-top:3px}
   .legal-top-nav{gap:10px}.legal-top-nav a{font-size:.7rem}.legal-top-nav a:last-child{display:none}
   .privacy-summary{grid-template-columns:1fr}.legal-data>div{grid-template-columns:1fr;gap:4px}
 }
 
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .hero-keys,.status-dot,.timeline-item.live-now::before,.timeline-live-label::before{animation:none}
+  .hero-keys,.status-dot{animation:none}
   *,*::before,*::after{transition:none!important}
 }
 
@@ -512,4 +462,3 @@ details p{font-size:.98rem;color:var(--text);padding:16px 20px;margin:0}
   .site-header{position:static}
   .hero-keys,.status-dot{animation:none}
 }
-
