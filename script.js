@@ -38,7 +38,7 @@ const shareButton=document.getElementById('shareButton');
 const shareFeedback=document.getElementById('shareFeedback');
 if(shareButton){
  shareButton.addEventListener('click',async()=>{
-   const data={title:'NeVOLE – Veřejná média patří veřejnosti',url:'https://jiri-web.github.io/nevole/'};
+   const data={title:'NeVOLE – Veřejná média patří veřejnosti',url:'https://nevole.info/'};
    try {
      if(navigator.share){await navigator.share(data);if(shareFeedback)shareFeedback.textContent='';}
      else if(navigator.clipboard){await navigator.clipboard.writeText(data.url);if(shareFeedback)shareFeedback.textContent='Odkaz byl zkopírován.';}
